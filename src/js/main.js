@@ -2,12 +2,14 @@ const cards = document.querySelectorAll('.card__item');
 
 cards.forEach((card) => {
   card.addEventListener('click', (e) => {
-    const target = e.target;
+    const target = e.currentTarget;
 
-    if (target !== card) {
-      card.classList.remove('active');
-    }
+    cards.forEach((otherCard) => {
+      if (otherCard !== target) {
+        otherCard.classList.remove('active');
+      }
+    });
 
-    card.classList.add('active');
+    target.classList.add('active');
   });
 });

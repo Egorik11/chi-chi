@@ -15,6 +15,10 @@ body {
   }
 }
 
+.visibility-off {
+  display: none !important;
+}
+
 .header__wrapper {
   background-color: #000100;
   .header {
